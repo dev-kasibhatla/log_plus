@@ -10,8 +10,6 @@ Written in pure Dart, with no dependencies.
 - [x] In-Memory Log Storage: Store logs in memory for post-execution analysis and troubleshooting
 - [x] Enhanced Debugging: Optionally include and print stack traces alongside log messages to expedite debugging
 
-
-
 ## Getting started
 
 1. Install the package
@@ -19,8 +17,13 @@ Written in pure Dart, with no dependencies.
 3. Create a new instance of `Logs` and start logging. Use the same instance across your application to maintain a single log history.
 
 ## Screenshots
-![View structured and coloured output in console](docs/images/coloured_output.png "View structured and coloured output in console")
-![Optionally include stack trace in logs](docs/images/traces.png "Optionally include stack trace in logs")
+![View structured and coloured output in console](docs/images/coloured_output.png)
+
+View structured and coloured output in console
+
+![Optionally include stack trace in logs](docs/images/traces.png)
+
+Optionally include stack trace in logs
 
 ## Usage
 
