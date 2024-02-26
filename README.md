@@ -11,11 +11,16 @@ Written in pure Dart, with no dependencies.
 - [x] Enhanced Debugging: Optionally include and print stack traces alongside log messages to expedite debugging
 
 
+
 ## Getting started
 
 1. Install the package
 2. Import the package
 3. Create a new instance of `Logs` and start logging. Use the same instance across your application to maintain a single log history.
+
+## Screenshots
+![View structured and coloured output in console] (docs/images/console_output.png "View structured and coloured output in console")
+![Optionally include stack trace in logs] (docs/images/stack_trace.png "Optionally include stack trace in logs")
 
 ## Usage
 
