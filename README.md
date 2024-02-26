@@ -1,5 +1,3 @@
-<!--
-
 # Logs
 Small, feature-rich logging package for Dart and Flutter.
 Written in pure Dart, with no dependencies.
