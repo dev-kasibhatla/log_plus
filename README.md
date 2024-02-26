@@ -64,4 +64,5 @@ void main() {
 ```
 
 ## Additional information
-None at the moment.
+Report any issues or feature requests on the [GitHub repository](https://github.com/dev-kasibhatla/logs/issues).
+PRs welcome.
