@@ -1,3 +1,7 @@
+[![Coverage](https://img.shields.io/codecov/c/github/dev-kasibhatla/logs)](https://github.com/dev-kasibhatla/logs)
+[![License](https://img.shields.io/github/license/dev-kasibhatla/logs)](https://github.com/dev-kasibhatla/logs/blob/main/LICENSE)
+[![Tests](https://img.shields.io/github/actions/workflow/status/dev-kasibhatla/logs/.github%2Fworkflows%2Fdart-tests.yml)](https://github.com/dev-kasibhatla/logs/actions)
+
 # Logs
 Small, feature-rich logging package for Dart and Flutter.
 Written in pure Dart, with no dependencies.
