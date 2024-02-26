@@ -187,33 +187,33 @@ class Logs {
     // print in colours
     switch (log.level) {
       case LogLevel.verbose:
-        print('\x1B[2m${log.time.toIso8601String()} [VERBOSE] ${log.message}');
+        print('\x1B[2m${log.time.toIso8601String()} [VERBOSE] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
-          print('\x1B[2m${log.trace}');
+          print('\x1B[2m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.debug:
-        print('\x1B[34m${log.time.toIso8601String()} [DEBUG] ${log.message}');
+        print('\x1B[34m${log.time.toIso8601String()} [DEBUG] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
-          print('\x1B[34m${log.trace}');
+          print('\x1B[34m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.info:
-        print('\x1B[32m${log.time.toIso8601String()} [INFO] ${log.message}');
+        print('\x1B[32m${log.time.toIso8601String()} [INFO] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
-          print('\x1B[32m${log.trace}');
+          print('\x1B[32m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.warning:
-        print('\x1B[33m${log.time.toIso8601String()} [WARNING] ${log.message}');
+        print('\x1B[33m${log.time.toIso8601String()} [WARNING] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
-          print('\x1B[33m${log.trace}');
+          print('\x1B[33m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.error:
-        print('\x1B[31m${log.time.toIso8601String()} [ERROR] ${log.message}');
+        print('\x1B[31m${log.time.toIso8601String()} [ERROR] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
-          print('\x1B[31m${log.trace}');
+          print('\x1B[31m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.none:
