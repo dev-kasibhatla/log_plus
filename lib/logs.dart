@@ -1,4 +1,4 @@
-library simple_logger;
+library logs;
 
 import 'package:flutter/foundation.dart';
 
