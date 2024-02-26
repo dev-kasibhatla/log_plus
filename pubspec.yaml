@@ -1,6 +1,6 @@
 name: logs
 description: "Small, feature-rich logging package for Dart and Flutter. Written in pure Dart, with no dependencies."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/dev-kasibhatla/logs
 repository: https://github.com/dev-kasibhatla/logs
 issue_tracker: https://github.com/dev-kasibhatla/logs/issues
