@@ -1,19 +1,22 @@
 library logs;
 
-import 'package:flutter/foundation.dart';
-
 /// Log levels for the logger
 enum LogLevel {
   /// Verbose log level. Used for debugging purposes
   verbose,
+
   /// Debug log level. Used for debugging purposes
   debug,
+
   /// Info log level. Used for general information
   info,
+
   /// Warning log level. Used for warnings. Typically for non-critical issues
   warning,
+
   /// Error log level. Used for errors. Typically for critical issues
   error,
+
   /// Use this to disable logging and not print anything
   none,
 }
@@ -61,27 +64,38 @@ enum LogLevel {
 /// List<Map> logs = log.getStoredLogs();
 /// ```
 class Logs {
-  final LogLevel
-  _storeLogLevel,
-  _printLogLevelWhenDebug,
-  _printLogLevelWhenRelease;
+  final LogLevel _storeLogLevel,
+      _printLogLevelWhenDebug,
+      _printLogLevelWhenRelease;
   final List<_SingleLog> _logs = [];
   final int _storeLimit;
+  final bool _isRelease;
 
   Logs({
     /// The minimum log level to store in memory for later retrieval
     LogLevel storeLogLevel = LogLevel.verbose,
+
     /// The minimum log level to print when running in debug mode
     LogLevel printLogLevelWhenDebug = LogLevel.verbose,
+
     /// The minimum log level to print when running in release mode. Use LogLevel.none to disable printing
     LogLevel printLogLevelWhenRelease = LogLevel.error,
+
     /// The maximum number of logs to store in memory. When the limit is reached, the oldest logs are removed
     int storeLimit = 500,
+
+    /// Set to true to run in release mode. Use your own method to determine if the app is running in release mode
+    /// In flutter, you simply pass kReleaseMode from the foundation package
+    /// ```dart
+    /// import 'package:flutter/foundation.dart';
+    /// final log = Logs(isRelease: kReleaseMode);
+    /// ```
+    bool inReleaseMode = false,
   })  : _printLogLevelWhenRelease = printLogLevelWhenRelease,
         _printLogLevelWhenDebug = printLogLevelWhenDebug,
         _storeLogLevel = storeLogLevel,
-        _storeLimit = storeLimit;
-
+        _storeLimit = storeLimit,
+        _isRelease = inReleaseMode;
 
   /// Log a verbose message
   ///
@@ -94,7 +108,6 @@ class Logs {
     }
     _createLog(LogLevel.verbose, message, trace);
   }
-
 
   /// Log a debug message
   ///
@@ -120,7 +133,6 @@ class Logs {
     _createLog(LogLevel.info, message, trace);
   }
 
-
   /// Log a warning message
   ///
   /// Use includeTrace to include the stack trace in the log. Note that this will use
@@ -133,7 +145,6 @@ class Logs {
     _createLog(LogLevel.warning, message, trace);
   }
 
-
   /// Log an error message
   ///
   /// Use includeTrace to include the stack trace in the log. Note that this will use
@@ -145,7 +156,6 @@ class Logs {
     }
     _createLog(LogLevel.error, message, trace);
   }
-
 
   /// Get the stored logs as a list of maps
   ///
@@ -172,7 +182,7 @@ class Logs {
     }
 
     //check if running in debug or release mode
-    if (kDebugMode) {
+    if (!_isRelease) {
       if (_printLogLevelWhenDebug.index <= level.index) {
         _beautifulPrint(log);
       }
@@ -184,41 +194,44 @@ class Logs {
   }
 
   void _beautifulPrint(_SingleLog log) {
-    // print in colours
     switch (log.level) {
       case LogLevel.verbose:
-        print('\x1B[2m${log.time.toIso8601String()} [VERBOSE] ${log.message} \x1B[0m');
+        print(
+            '\x1B[2m${log.time.toIso8601String()} [VERBOSE] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
           print('\x1B[2m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.debug:
-        print('\x1B[34m${log.time.toIso8601String()} [DEBUG] ${log.message} \x1B[0m');
+        print(
+            '\x1B[34m${log.time.toIso8601String()} [DEBUG] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
           print('\x1B[34m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.info:
-        print('\x1B[32m${log.time.toIso8601String()} [INFO] ${log.message} \x1B[0m');
+        print(
+            '\x1B[32m${log.time.toIso8601String()} [INFO] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
           print('\x1B[32m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.warning:
-        print('\x1B[33m${log.time.toIso8601String()} [WARNING] ${log.message} \x1B[0m');
+        print(
+            '\x1B[33m${log.time.toIso8601String()} [WARNING] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
           print('\x1B[33m${log.trace} \x1B[0m');
         }
         break;
       case LogLevel.error:
-        print('\x1B[31m${log.time.toIso8601String()} [ERROR] ${log.message} \x1B[0m');
+        print(
+            '\x1B[31m${log.time.toIso8601String()} [ERROR] ${log.message} \x1B[0m');
         if (!log.traceEmpty) {
           print('\x1B[31m${log.trace} \x1B[0m');
         }
         break;
       default:
         print('Logger error: Unknown log level: ${log.level}');
-
     }
   }
 }
