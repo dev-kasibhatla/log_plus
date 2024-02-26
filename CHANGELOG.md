@@ -7,3 +7,7 @@ Initial release
 * Optional stack trace inclusion
 * Customisable log storage limit
 * Customisable log output based on log levels and debug mode
+
+
+## 0.0.2
+* Make the package pure dart
