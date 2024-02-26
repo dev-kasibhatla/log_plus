@@ -216,8 +216,8 @@ class Logs {
           print('\x1B[31m${log.trace} \x1B[0m');
         }
         break;
-      case LogLevel.none:
-        break;
+      default:
+        print('Logger error: Unknown log level: ${log.level}');
 
     }
   }
@@ -241,6 +241,7 @@ class _SingleLog {
       'time': time.toIso8601String(),
       'level': level.toString().split('.').last,
       'message': message,
+      'trace': trace.toString(),
     };
   }
 }
