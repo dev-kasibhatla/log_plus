@@ -11,3 +11,6 @@ Initial release
 
 ## 0.0.2
 * Make the package pure dart
+
+## 0.0.3
+* Rename the package to `log_plus`
