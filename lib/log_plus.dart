@@ -154,12 +154,14 @@ class Logs {
   /// Use includeTrace to include the stack trace in the log. Note that this will use
   /// more memory, and should be used only for debugging purposes
   void w(
+
       /// Message to log. Can be any type
       /// If the message does not have a string representation, it will be printed as is
-      dynamic message, {
-        /// Set to true to include the stack trace in the log. Note that this will use
-        /// more memory, and should be used only for debugging purposes
-        bool includeTrace = false}) {
+      dynamic message,
+      {
+      /// Set to true to include the stack trace in the log. Note that this will use
+      /// more memory, and should be used only for debugging purposes
+      bool includeTrace = false}) {
     StackTrace trace = StackTrace.empty;
     if (includeTrace) {
       trace = StackTrace.current;
@@ -172,12 +174,14 @@ class Logs {
   /// Use includeTrace to include the stack trace in the log. Note that this will use
   /// more memory, and should be used only for debugging purposes
   void e(
+
       /// Message to log. Can be any type
       /// If the message does not have a string representation, it will be printed as is
-      dynamic message, {
-        /// Set to true to include the stack trace in the log. Note that this will use
-        /// more memory, and should be used only for debugging purposes
-        bool includeTrace = false}) {
+      dynamic message,
+      {
+      /// Set to true to include the stack trace in the log. Note that this will use
+      /// more memory, and should be used only for debugging purposes
+      bool includeTrace = false}) {
     StackTrace trace = StackTrace.empty;
     if (includeTrace) {
       trace = StackTrace.current;
