@@ -17,3 +17,7 @@ Initial release
 
 ## 0.0.4
 * Add supported platforms to `pubspec.yaml`
+
+## 0.0.5
+* Update metadata
+* Improve documentation

@@ -21,11 +21,11 @@ Written in pure Dart, with no dependencies.
 3. Create a new instance of `Logs` and start logging. Use the same instance across your application to maintain a single log history.
 
 ## Screenshots
-![View structured and coloured output in console](extra/images/coloured_output.png)
+![View structured and coloured output in console](https://raw.githubusercontent.com/dev-kasibhatla/log_plus/main/extra/images/coloured_output.png)
 
 View structured and coloured output in console
 
-![Optionally include stack trace in logs](extra/images/traces.png)
+![Optionally include stack trace in logs](https://raw.githubusercontent.com/dev-kasibhatla/log_plus/main/extra/images/traces.png)
 
 Optionally include stack trace in logs
 
