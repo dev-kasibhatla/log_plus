@@ -14,3 +14,6 @@ Initial release
 
 ## 0.0.3
 * Rename the package to `log_plus`
+
+## 0.0.4
+* Add supported platforms to `pubspec.yaml`

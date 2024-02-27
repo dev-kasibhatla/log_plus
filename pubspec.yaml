@@ -1,6 +1,6 @@
 name: log_plus
 description: "Small, feature-rich logging package for Dart and Flutter. Written in pure Dart, with no dependencies."
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/dev-kasibhatla/log_plus
 repository: https://github.com/dev-kasibhatla/log_plus
 issue_tracker: https://github.com/dev-kasibhatla/log_plus/issues
@@ -8,5 +8,13 @@ issue_tracker: https://github.com/dev-kasibhatla/log_plus/issues
 environment:
   sdk: '>=3.3.0 <4.0.0'
 
-dependencies:
+dev_dependencies:
   test: ^1.15.3
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
