@@ -1,4 +1,4 @@
-name: logs
+name: log_plus
 description: "Small, feature-rich logging package for Dart and Flutter. Written in pure Dart, with no dependencies."
 version: 0.0.2
 homepage: https://github.com/dev-kasibhatla/logs

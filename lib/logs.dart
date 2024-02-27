@@ -1,4 +1,4 @@
-library logs;
+library logs_plus;
 
 /// Log levels for the logger
 enum LogLevel {

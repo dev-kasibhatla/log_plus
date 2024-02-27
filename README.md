@@ -1,8 +1,8 @@
-[![Coverage](https://img.shields.io/codecov/c/github/dev-kasibhatla/logs)](https://github.com/dev-kasibhatla/logs)
-[![License](https://img.shields.io/github/license/dev-kasibhatla/logs)](https://github.com/dev-kasibhatla/logs/blob/main/LICENSE)
-[![Tests](https://img.shields.io/github/actions/workflow/status/dev-kasibhatla/logs/.github%2Fworkflows%2Fdart-tests.yml)](https://github.com/dev-kasibhatla/logs/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/dev-kasibhatla/log_plus)](https://github.com/dev-kasibhatla/log_plus)
+[![License](https://img.shields.io/github/license/dev-kasibhatla/log_plus)](https://github.com/dev-kasibhatla/log_plus/blob/main/LICENSE)
+[![Tests](https://img.shields.io/github/actions/workflow/status/dev-kasibhatla/log_plus/.github%2Fworkflows%2Fdart-tests.yml)](https://github.com/dev-kasibhatla/log_plus/actions)
 
-# Logs
+# log_plus
 Small, feature-rich logging package for Dart and Flutter.
 Written in pure Dart, with no dependencies.
 
@@ -34,7 +34,7 @@ Optionally include stack trace in logs
 Get started with no configuration:
 
 ```dart
-import 'package:logs/logs.dart';
+import 'package:log_plus/logs.dart';
 
 void main() {
     final log = Logs();
@@ -49,7 +49,7 @@ void main() {
 Customise output and storage:
 
 ```dart
-import 'package:logs/logs.dart';
+import 'package:log_plus/logs.dart';
 
 void main() {
     final log = Logs(
@@ -68,5 +68,5 @@ void main() {
 ```
 
 ## Additional information
-Report any issues or feature requests on the [GitHub repository](https://github.com/dev-kasibhatla/logs/issues).
+Report any issues or feature requests on the [GitHub repository](https://github.com/dev-kasibhatla/log_plus/issues).
 PRs welcome.
