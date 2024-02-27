@@ -34,7 +34,7 @@ Optionally include stack trace in logs
 Get started with no configuration:
 
 ```dart
-import 'package:log_plus/logs.dart';
+import 'package:log_plus/log_plus.dart';
 
 void main() {
     final log = Logs();
@@ -49,7 +49,7 @@ void main() {
 Customise output and storage:
 
 ```dart
-import 'package:log_plus/logs.dart';
+import 'package:log_plus/log_plus.dart';
 
 void main() {
     final log = Logs(

@@ -1,4 +1,4 @@
-import 'package:log_plus/logs.dart';
+import 'package:log_plus/log_plus.dart';
 
 void main() {
   print(
