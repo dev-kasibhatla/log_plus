@@ -21,3 +21,6 @@ Initial release
 ## 0.0.5
 * Update metadata
 * Improve documentation
+
+## 0.0.6
+* Re-format package
